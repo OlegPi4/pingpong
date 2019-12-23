@@ -34,7 +34,7 @@ def moveRight():
     pen.setposition(x+speed, y)
 def change()  :
     """
-    Изменение видимости черепашки клавишей "Spase"
+    Изменение видимости черепашки нажатием символа  "a"
     """
     if pen.isvisible():
         pen.up()
@@ -44,10 +44,14 @@ def change()  :
         pen.showturtle()
 
 def speedUp():
+    """ Увеличение скорости на 1 при нажатии символа "q"
+    """
     global speed
     speed += 1
 
 def speedDown():
+    """ Увеличение скорости на 1 при нажатии символа "z"
+    """
     global speed
     speed = max(0, speed-1)
 window = turtle.Screen()

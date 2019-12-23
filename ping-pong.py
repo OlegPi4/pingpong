@@ -37,7 +37,7 @@ def change()  :
     Изменение видимости черепашки нажатием символа  "a"
     """
     if pen.isvisible():
-        pen.up()
+        pen.up() 
         pen.hideturtle()
     else:
         pen.down()

@@ -47,6 +47,7 @@ def setka(lx, ly, n, m, h, w, a, b, c, aa, bb, cc, ws):
     :param h: высота
     :param w: ширина
     """
+    pen.speed(0)
     window.bgcolor(a, b, c)
     pen.color(aa, bb, cc)
     pen.pensize(ws)
@@ -79,6 +80,7 @@ def coleringsqear(lx, ly, n, m, h, w, a, b, c, ws=0):
     :param a,b,c: цвет заливки, значения  от 0-1
     :param ws: ширина линий между квадратами
     """
+    pen.speed(0)
     x = lx
     y = ly
     stepy = h / m

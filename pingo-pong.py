@@ -4,7 +4,7 @@ window = turtle.Screen()
 window.title("Ping-Pong")
 window.setup(width=1.0, height=1.0)
 window.bgcolor(0.2, 0.2, 0.2)
-window.tracer(1.0)
+window.tracer(2)
 border = turtle.Turtle()
 border.speed(0)
 border.color('green')
@@ -34,16 +34,36 @@ rocket_a.shape('square')
 rocket_a.shapesize(stretch_wid=5, stretch_len=1)
 rocket_a.penup()
 rocket_a.goto(-470, 0)
+titl = turtle.Turtle(visible=False)
+titl.color('white')
+titl.penup()
+titl.setposition(-100, 400)
+FT = ("Arial", 30)
+titl.write("Ping-Pong", font=FT)
+
+FONT = ("Arial", 44)
+scorea = 0
+scoreb = 0
+sa = turtle.Turtle(visible=False)
+sa.color('white')
+sa.penup()
+sa.setposition(-200, 300)
+sa.write(scorea, font=FONT)
+sb = turtle.Turtle(visible=False)
+sb.color('white')
+sb.penup()
+sb.setposition(200, 300)
+sb.write(scoreb, font=FONT)
 def move_up_a():
     y = rocket_a.ycor()  # определение координаті у объєкта
-    if y <= 240:
-        rocket_a.sety(y + 10)
+    if y <= 230:
+        rocket_a.sety(y + 20)
     else:
         rocket_a.set(y)
 def move_down_a():
     y = rocket_a.ycor()  # определение координаті у объєкта
-    if y >= -240:
-        rocket_a.sety(y - 10)
+    if y >= -230:
+        rocket_a.sety(y - 20)
     else:
         rocket_a.sety(y)
 
@@ -55,14 +75,14 @@ rocket_b.penup()
 rocket_b.goto(470, 0)
 def move_up_b():
     y = rocket_b.ycor()  # определение координаті у объєкта
-    if y <= 240:
-        rocket_b.sety(y + 10)
+    if y <= 230:
+        rocket_b.sety(y + 20)
     else:
         rocket_b.set(y)
 def move_down_b():
     y = rocket_b.ycor()  # определение координаті у объєкта
-    if y >= -240:
-        rocket_b.sety(y - 10)
+    if y >= -230:
+        rocket_b.sety(y - 20)
     else:
         rocket_b.sety(y)
 
@@ -87,13 +107,19 @@ while True:
     if ball.ycor() <= -290:
         ball.dy = -ball.dy
     if ball.xcor() >= 490:
+        scorea +=  1
+        sa.clear()
+        sa.write(scorea, font=FONT)
         ball.goto(0,randint(-150, 150))
-        ball.dx = choice([-5, -4, -3, 3, 4, 5])
-        ball.dy = choice([-5, -4, -3, 3, 4, 5])
+        ball.dx = choice([-3, -2, 2, 3])
+        ball.dy = choice([-3, -2, 2, 3])
     if ball.xcor() <= -490:
+        scoreb += 1
+        sb.clear()
+        sb.write(scoreb, font=FONT)
         ball.goto(0,randint(-150, 150))
-        ball.dx = choice([-5, -4, -3, 3, 4, 5])
-        ball.dy = choice([-5, -4, -3, 3, 4, 5])
+        ball.dx = choice([-3, -2, 2, 3])
+        ball.dy = choice([-3, -2, 2, 3])
 
     if ball.ycor() >= rocket_b.ycor() - 50 and ball.ycor() <= rocket_b.ycor() + 50 and \
         ball.xcor() >= rocket_b.xcor() - 20 and ball.xcor() <= rocket_b.xcor() + 20:

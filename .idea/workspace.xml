@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4ac483e0-f4f7-41f3-99ec-59985bef667c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/pingo-pong.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ping-pong.py" beforeDir="false" afterPath="$PROJECT_DIR$/ping-pong.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/terscolorturtle.py" beforeDir="false" afterPath="$PROJECT_DIR$/terscolorturtle.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pingo-pong.py" beforeDir="false" afterPath="$PROJECT_DIR$/pingo-pong.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
